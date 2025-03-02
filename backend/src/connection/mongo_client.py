@@ -1,3 +1,5 @@
-from pymongo import MongoClient
+import pymongo
 
-connection = MongoClient()
+conn = pymongo.MongoClient("mongodb://localhost:27017/")
+db = conn["peliculasdb"]
+peliculascol = db["peliculas"]
