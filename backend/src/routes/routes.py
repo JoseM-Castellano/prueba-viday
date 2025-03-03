@@ -9,7 +9,6 @@ router = APIRouter()
 
 @router.get("/peliculas")
 async def get_peliculas(nombre:str="",director:str="",anno:int=-1,media:float=-1):
-    print("Get peliculas")
     query = {}
     if nombre != "" : query.update({"nombre" : nombre})
     if director != "" : query.update({"director" : director})
